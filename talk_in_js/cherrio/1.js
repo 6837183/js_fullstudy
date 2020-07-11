@@ -30,11 +30,10 @@ const xgg = [jiajun,xyl]
 // JS里没有array类型
 // 数据类型 数值类型number 字符串类型string 布尔值bool null undefined
 // unfined
-var cherrio //关键字 标识符
+var cherrio = [];//关键字 标识符
 console.log(cherrio);   //undefined
 console.log(typeof cherrio);
 // 变量的类型由值决定
-cherrio = [];
 //基础类型不包括array array只是object的子类型
 console.log(typeof cherrio);//object array
 
