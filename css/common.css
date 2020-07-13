@@ -12,6 +12,7 @@ a{
 }
 a:link{
     color: #3377aa;
+    text-decoration: none;
 }
 a:visited{
     color: #666699;
@@ -336,7 +337,7 @@ ul, ol {
 }
 .mod {
     width: auto;
-    *zoom: 1;
+    /* *zoom: 1; */
     margin-bottom: 35px;
 }
 h2 {
@@ -354,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 150%;
     color: #666666;
 }
-h2 {
+/* h2 {
     display: block;
     font-size: 1.5em;
     margin-block-start: 0.83em;
@@ -362,7 +363,7 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-}
+} */
 #anony-sns .online ul {
     margin-top: -4px;
 }
@@ -542,4 +543,51 @@ fieldset, img {
     line-height: 1;
     margin-top: 10px;
     display: block;
+}
+.tags ul {
+    margin-top: -4px;
+}
+.list {
+     font-size: 0;
+    letter-spacing: -.31em; 
+    *letter-spacing: normal;
+    *word-spacing: -.43em;
+}
+.tags li {
+    width: 4em;
+    margin-top: 4px;
+    text-align: left;
+}
+.list li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    /* width: 24.8%; */
+    vertical-align: top;
+    /* text-align: center; */
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+#anony-movie a:link, #anony-movie a:visited {
+    color: #27a;
+}
+.side-links li {
+    position: relative;
+    margin-top: 5px;
+    font-size: 14px;
+}
+#anony-movie .movie-charts ol {
+    margin: 0;
+    padding: 0;
+}
+ol {
+    padding: 0 0 0 20px;
+}
+#anony-movie .movie-charts li {
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    border-bottom: 1px solid #eaeaea;
 }
