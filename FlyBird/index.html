@@ -19,6 +19,8 @@
   </div>
 </body>
 <script src='./js/bird.js'></script>
+<script src='./js/block.js'></script>
+<script src='./js/baseObj.js'></script>
 <script>
   var jsWrapBg = document.getElementById('wrapBg')
   var jsHeadTitle = document.getElementById('headTitle')  //获取标题
@@ -39,7 +41,10 @@
   }
     var jsGrassLand1 = document.getElementById('grassLand1')
     var jsGrassLand2 = document.getElementById('grassLand2')
-    var landTimer = setInterval(landRun, 30) //
+
+    var blocksArr = [];
+        var blockDistance = baseObj.randomNum(130,250);
+    var landTimer = setInterval(landRun, 30) //让草地动起来
     function landRun(){
         if(jsGrassLand1.offsetLeft <= -343) {
             jsGrassLand1.style.left = 343 + 'px'
@@ -59,7 +64,16 @@
     jsStartBtn.style.display = 'none'
     // 插入小鸟到界面当中
         bird.showBird(jsWrapBg)
+        bird.flyBird() //小鸟下落
+        bird.wingWave()//
+        jsWrapBg.onclick = function (){
+          bird.fallSpeed = -8
+        }
 
+
+        //出现管道
+        var b = new Block()
+        b.createBlock()
     }
 </script>
 <html>
