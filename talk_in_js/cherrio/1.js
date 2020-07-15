@@ -1,58 +1,46 @@
-// 对象是由方法和属性构成 语法 
-// 1.构建一只鸭子
-// 2.招募1000只鸭子
-// 3.告诉国王你完成了任务
-// JSON Object 对象字面量 literal object
-var duck ={
-    type:'煌上煌',
-    yz:99,
-    duckSing:function(){
-        console.log('嘎嘎嘎');
-        
-    },
-}
-
-var jiajun = {
-    name:'佳俊',
-    duckSing:function(){
-        console.log('嘎嘎嘎');
-        
-    }
-}
-
-var xyl = {
-    name:'元隆',
-    duckSing: '嘎嘎嘎'
-}
-
-const xgg = [jiajun,xyl]
-
-// JS里没有array类型
-// 数据类型 数值类型number 字符串类型string 布尔值bool null undefined
-// unfined
-var cherrio = [];//关键字 标识符
-console.log(cherrio);   //undefined
-console.log(typeof cherrio);
-// 变量的类型由值决定
-//基础类型不包括array array只是object的子类型
-console.log(typeof cherrio);//object array
-
-for(var i=0;i<999;i++){
-    cherrio.push(duck)
-}
-
-// cherrio.push()
-for(var i=0;i<xgg.length;i++){
-    if(typeof xgg[i].duckSing == 'function'){
-        cherrio.push(xgg[i])
-    }
-}
-
-if(cherrio.length === 1000){
-    console.log('已招募完成，报告国王');
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 事件</title>  
+  <script type="text/javascript">
+   function count(){
+       var d = "";
+    var a=document.getElementById("txt1").value;   
+    //获取第一个输入框的值
+    var b=document.getElementById("txt2").value;
+	//获取第二个输入框的值
+    var c=document.getElementById("select").value;
+	//获取选择框的值
+    switch(c)
+	{
+     case "+":
+     //d = a + b;
+     d = parseInt(a)+parseInt(b);
+     break;
+     case "-":
+     d = a-b;
+     break;
+     case "*":
+     d = a*b;
+     break;
+     default:
+     d = a/b;
+     }
+    document.getElementById("fruit").value   = d;
     
-}
-duck.duckSing();
-for(let singer of cherrio){ 
-    cherrio[i].duckSing();
-}
+   }
+  </script> 
+ </head> 
+ <body>
+   计数器：<input type='text' id='txt1' /> 
+   <select id='select'>
+		<option value='+'>+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+   </select>
+   <input type='text' id='txt2' /> 
+   <input type='button' value='=' onclick="count()"/> <!--通过 = 按钮来调用创建的函数，得到结果--> 
+   <input type='text' id='fruit' />   
+ </body>
+</html>
