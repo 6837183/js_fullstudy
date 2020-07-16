@@ -1,0 +1,48 @@
+*{
+    -webkit-tap-highlight-color: rgba(255,0, 0, 0);
+}
+head{
+    display: none;
+}
+/* @media only screen and (min-width: 375px)
+html {
+    font-size: 100px;
+}
+meta{
+    display: none;
+}
+@media only screen and (min-width: 375px)
+html {
+    font-size: 100px;
+} */
+html body {
+    margin: 0;
+}
+body {
+    margin: 0;
+    color: #191919;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    position: relative;
+}
+element.style {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    display: none;
+}
+.TalionNav {
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    background: #fff;
+}
+header{
+    display: block;
+}
+div,p,span,a{
+    margin: 0;
+    padding: 0;
+}
+
+

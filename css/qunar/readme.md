@@ -13,7 +13,7 @@
   }
   stylus css 预编译器
   写的时候是.styl文件，生成css文件
-  一切css的复杂规则都蔑视，
+  一切css的复杂规则都蔑视， stylus common.styl -o common.css
     tab 使用缩进
     npm i -g stylus
     stylus common.styl -o common.css
