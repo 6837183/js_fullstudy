@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content=" initial-scale=0.5"> -->
+    <!-- <meta name="viewport" content=" initial-scale=0.3333333333333"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+    <script>
+        /* 1rem = 屏幕宽度 / 10 */
+        var ratio = 1/window.devicePixelRatio;
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'initial-scale=' + ratio;
+        var head = document.querySelector('head');
+        console.log(meta)
+       head.appendChild(meta)
+        var width = window.innerWidth / 10;
+      var html = document.querySelector('html');
+      //每一份 就是 1rem (因为 font-size 就是 1rem)
+      html.style.fontSize = width + 'px'; //1rem = html的font-size
+</script>
+    <style>
+/* body {
+    margin: 0;
+    padding: 0;
+} */
+
+        /* html {
+            font-size: 20px;
+        } */
+        /* div {
+            font-size: 30px;
+            width: 3rem;
+            height: 3rem;
+            background-color: green;
+        } */
+        input {
+            height: 0.75rem;
+            width: 5.9rem;
+            /*  */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text">
+    </div>
+</body>
+</html>
