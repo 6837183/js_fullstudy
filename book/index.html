@@ -1,35 +1,14 @@
-
-<map id="map" longitude="115.834895" latitude="28.720513"  show-location style="width: 100%; height: 100vh;">
-  <view class="wrapper">
-
-
-  <view class="bike-kind">
-    <view class="bike dc">
-      <text >单车</text>    
+<view class="wrapper">
+  <view  wx:for="{{articles}}" wx:for-item="group" class="group">
+    <view class="group-bar">
+      <view class="group-title">{{group.date}}</view>
     </view>
-    <view class="bike ddc">
-      <text>电单车</text>  
-    </view>
-  </view>
- 
-  <view class="er">
-    <view class="picture">
-      <image class="pic" src="./image/2.png" />
-    </view>
-    <view class="wenzi">
-      <text>10元红包人人可拿 和昊然一起去追风</text>
-      <view class="jt">
-        <image src="./image/yjt.png"></image>
+    <view class="group-content">
+      <view class="group-content-item" wx:for="{{group.items}}" 
+       wx:for-item="item" data-item="{{item}}">
+        <view class="group-content-item-desc">{{item.title}}</view>
+        <image src="{{item.pic}}"/>
       </view>
+    </view>
   </view>
-
-
-  </view>
-
-
-
-
-
-
 </view>
-</map>
