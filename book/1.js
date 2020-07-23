@@ -10,9 +10,9 @@ for (var i=0; i<1000; i++)
 {
     cherrio.push(duck)
 }
-if(cherrio.length === 1000){
-    console.log('已招募完成，报告国王');
-}
+// if(cherrio.length === 1000){
+//     console.log('已招募完成，报告国王');
+// }
 duck.duckSing();
  for( let singer of cherrio){
     //  cherrio[i].duckSing();
