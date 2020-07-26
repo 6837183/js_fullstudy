@@ -1,23 +1,20 @@
-var duck = {
-    duckSing:function(){
-        console.log("嘎嘎嘎");
+function calculateBonus(salary,level){
+    console.log(arguments);
+    if ( arguments.length < 2) {
+        throw new Error('传参不正确，请检查传递工资及等级')
     }
-}
-var cherrio = [];
-console.log(typeof cherrio);
 
-for (var i=0; i<1000; i++)
-{
-    cherrio.push(duck)
+    if (typeof salary != 'number' || salary < 0){
+        throw new TypeError('工资必须是整数');
+        salary = parseInt(salary)
+    }
+    if ( level == 'C'){
+        return salary * 16;
+    } else if( level == 'B'){
+        return salary * 18
+    } else if( level == 'A') {
+        return salary * 20
+    }
+    return salary * 12
 }
-// if(cherrio.length === 1000){
-//     console.log('已招募完成，报告国王');
-// }
-duck.duckSing();
- for( let singer of cherrio){
-    //  cherrio[i].duckSing();
-    // console.log(singer.duckSing())
- }
- for(var i=0;i<cherrio.length;i++){
-     cherrio[i].duckSing();
- }
+console.log(calculateBonus('20000','A'));
