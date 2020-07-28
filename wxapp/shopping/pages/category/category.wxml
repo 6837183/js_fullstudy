@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="menu">
+    <view class="menu-name" id="{{item.id}}" wx:for="{{category}}" wx:key="index" bindtap="changeMenu" style="color:{{item.id==idname?'#ad8c60':'#000000'}}">{{item.name}}
+    <view class="box" wx:if="{{item.id==idname}}"></view>
+    </view>
+    </view>
+
+    <scroll-view class="right" scroll-y="true" scroll-into-view="{{idname}}" scroll-with-animation="{{true}}"> 
+        <block wx:for="{{detail}}" wx:key="index">
+        <view class="wrapper" id="{{item.id}}">
+        
+            <view class="contents">
+                <image class="" src="{{item.banner}}"></image>
+            </view>
+            <view class="title">
+                <text>{{item.cate}}</text>
+            </view>
+
+            <block wx:for="{{item.detail}}" wx:for-item="group">
+                <view class="food">
+                    <view class="food-img">
+                    <image class="" src="{{group.thumb}}"></image>
+                    </view>
+                    <text>{{group.name}}</text>
+                </view>
+            </block>
+        
+        </view>
+        </block>
+    </scroll-view>
+</view>
