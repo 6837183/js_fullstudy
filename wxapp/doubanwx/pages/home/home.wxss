@@ -11,6 +11,7 @@
     margin-left: 30rpx;
     align-items: center;
     margin-bottom: 30rpx;
+    margin-top: 30rpx;
   }
   .title-wrapper .title{
     font-weight: bold;
@@ -34,7 +35,7 @@
     transform: rotate(-45deg);
   }
   .scroll-view__movie{
-    height: 402rpx;
+    height: 420rpx;
   }
   .scroll-view__movie .item{
     margin-left: 30rpx;

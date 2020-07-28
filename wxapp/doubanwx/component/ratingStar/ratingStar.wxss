@@ -1,0 +1,6 @@
+/* component/ratingStar/ratingStar.wxss */
+.image{
+    height: 24rpx;
+    width: 24rpx;
+
+}
