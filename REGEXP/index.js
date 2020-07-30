@@ -63,6 +63,6 @@ let patt2 = /word/
 // console.log(str.match(pat))
 
 // 手机号正则
-    let tel = '18370397660'
-    let par = /^1([3-9])\d{9}/
-    console.log(par.test(tel))
+    let tel = '2501520585@@.com'
+    let pat =/(\S)+[@]{1}(\S)+[.]{1}(\w)+/
+    console.log(pat.test(tel))
