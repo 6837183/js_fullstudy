@@ -9,7 +9,7 @@
   }
   
   .name {
-    font-size: 32rpx;
+    font-size: 28rpx;
     font-weight: bold;
     min-width: 200rpx;
     white-space: nowrap;
@@ -25,5 +25,10 @@
   }
   .score-wrapper{
     display: flex;
-    align-items: start;
+    align-items: center;
+   justify-content: space-between;
+  }
+  .score{
+    font-weight: normal;
+    font-size: 25rpx;
   }
