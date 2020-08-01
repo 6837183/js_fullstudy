@@ -1,6 +1,9 @@
 /* component/ratingStar/ratingStar.wxss */
-.image{
+/* .image{
     height: 24rpx;
     width: 24rpx;
 
+} */
+.star-wrapper{
+    display: flex;
 }
