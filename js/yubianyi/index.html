@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var b;
+        // console.log(b)    //变量  声明提升
+        // b = 123
+
+
+        // test()
+        // function test(){    // 函数声明 整体提升
+        //     var a = 111
+        //     console.log('hello',a)
+        // }
+
+
+    </script>
+
+    <script>
+        // AO:{
+        //     a:undefined 123 function(){},
+        //     b:undefined,
+        //     d:undefined  function(){} 123,
+        // }
+
+        function fn(a){
+            console.log(a)//function a(){}
+            var a = 123
+            console.log(a)//123
+            function a() {}
+            console.log(a)  //123
+            var b = function() {}
+            console.log(b)
+            function d() {}// function (){}
+            var d = a
+            console.log(a)  //123
+        }
+        fn(1)
+
+
+    </script>
+</body>
+</html>
