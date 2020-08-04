@@ -2,7 +2,7 @@ function foo(a){
     var b = 2
 
     function bar(){
-
+        console.log(4)
     }
 
     var c = 3
