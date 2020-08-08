@@ -34,16 +34,40 @@ Component({
     YEAR: 0,
     MONTH: 0,
     DATE: 0,
+    isLeft:true,
   },
 
   ready: function() {
     this.today()
   },
+  
 
   /**
    * 组件的方法列表
    */
   methods: {
+    chooseColor:function (e) {
+      let DATE = new Date(),
+      year = DATE.getFullYear(),
+      month = DATE.getMonth() + 1,
+      date = DATE.getDate(),
+      select = year + '-' + this.zero(month) + '-' + this.zero(e.currentTarget.dataset.index + 1); 
+      console.log(e);
+      this.setData({
+        format:select
+      })
+    },
+
+    // handleitemClick() {
+    //   console.log('sfasfasfas')
+    //   this.setData({
+    //     isLeft:false
+  
+    //   })
+    // },
+    // handleitemClick(event){
+    //   console.log(event)
+    // },
     today () { // 默认选中当天，并初始化组件
       let DATE = new Date(),
           year = DATE.getFullYear(),
