@@ -1,87 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .image-item {
-            display: block;
-            margin-bottom: 30px;
-            width: 200px;
-            /* height: 200px; */
-        }
-    </style>
-</head>
-
-<body>
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3971704233,4079860471&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2521578829,3903361267&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3270476510,3442679223&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3310400043,3716964882&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3877718431,3108004878&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3078783530,2134292988&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2829176546,3514742997&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2548546321,2619480368&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1430304711,3195816932&fm=26&gp=0.jpg"
-        alt="">
-    <img class="image-item" src="" lazyload="true"
-        data-original="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2111478125,1870420171&fm=26&gp=0.jpg"
-        alt="">
-
-        <script>
-            // 可视区域的高度
-            let viewHeight = document.documentElement.clientHeight
-            console.log(viewHeight)
+<!-- components/Calendar/calendar.wxml -->
+<view class="calendar">
+    <!-- 显示当前年月日 -->
+    <view class="calendar-title">
+      <view class="item ctrl">{{lastMonth}}</view>
+      <view class="item title">{{title}}</view>
+      <view class="item ctrl">{{nextMonth}}</view>
+      <view class="item ctrl today">今天</view>
+      </view>
+    <!-- 遍历星期 -->
+    <view class="calendar-week">
+      <view class="item" wx:for="{{weekText}}" wx:key="index">{{item}}</view>
+    </view>
+    <!-- 日期 -->
+    <view class="calendar-container">
+      <!-- 上个月的格子 -->
+      <view class="grid gray" wx:for="{{emptyGridsBefore}}" wx:key="index">{{item}}</view>
+      <!-- 当月的格子 -->
+    <view class="grid" wx:for="{{thisMonthDays}}" wx:key="index">
         
-            function lazyload() {
-                let eles = document.querySelectorAll('img[data-original][lazyload]')
-                //判断每一个img 是否出现在来可视区域内
-                // eles.forEach((item)=>{
-                //     console.log(item)
-                // })
-                Array.prototype.forEach.call(eles, function (item, index) {
-                    console.log(item)
-                    let rect;
-                    // if (item.dataset.original === "")
-                    //     return
-                    rect = item.getBoundingClientRect() //用于获取页面上某个元素的左上右下
-                    console.log(rect)
-                    if (rect.bottom >= 0 && rect.top < viewHeight) { // 在可视区域内
-                        !function () {
-                            let img = new Image()
-                            img.src = item.dataset.original
-                            img.onload = function () {
-                                item.src = img.src
-                            }
-                            item.removeAttribute('data-original') // 移除属性，下次不再遍历
-                            item.removeAttribute('lazyload')
-                        }()
-                    }
-                })
-            }
-            lazyload()
-            document.addEventListener('scroll', lazyload)
-        </script>
-</body>
-
-
-</html>
+        <view class="self"></view>
+        <view class="wrap {{format === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' : ''}}" bind:tap="chooseColor" data-index="{{index}}">{{item.date}}</view>
+        </view>
+      <!-- 下个月的格子 -->
+      <view class="grid gray" wx:for="{{emptyGridsAfter}}" wx:key="index">{{item}}</view>
+    </view>
+</view>
