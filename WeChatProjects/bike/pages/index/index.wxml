@@ -1,0 +1,49 @@
+<view class="main">
+  <view class="bike-kind">
+    <view class="bike dc">
+      <text>单车</text>
+    </view>
+    <view class="bike ddc">
+      <text>电单车</text>
+    </view>
+    <view class="lv"></view>
+  </view>
+  <map id="map" longitude="115.834895" latitude="28.720513" show-location style="width: 100%; height: 70vh;">
+    <cover-view class="wrapper">
+      <cover-view class="er">
+        <cover-view class="wenzi">
+          <text>10元红包人人可拿 和昊然一起去追风</text>
+        </cover-view>
+        <cover-view class="jt">
+          <cover-image src="./image/yjt.png"></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class="picture">
+        <cover-image class="pic" src="./image/2.jpg" />
+      </cover-view>
+    </cover-view>
+    <cover-view class="pos" scroll-top="0">
+      <cover-view class="pos-a">
+        <cover-image class="" src="./image/4.png"></cover-image>
+      </cover-view>
+    </cover-view>
+  </map>
+  <cover-view class="down">
+    <cover-view class="safe">
+      <cover-view class="safe-in zuo">
+        <cover-view class="zi">
+          <text>遵守交规 安全骑行</text>
+        </cover-view>
+        <cover-view class="zi1">
+          <text>骑行时请遵守交通规则，注意安全骑行</text>
+        </cover-view>
+      </cover-view>
+      <cover-view class="safe-in you">
+        <cover-image class="you-img" src="./image/3.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class="scan" >
+      <text >扫码用车</text>
+    </cover-view>
+  </cover-view>
+</view>
