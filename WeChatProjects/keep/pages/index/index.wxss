@@ -1,0 +1,53 @@
+/* pages/index/index.wxss */
+.swiper{
+    height: 367px;
+    position: relative;
+    padding: 20rpx;
+    background-color: #fafafa;
+}
+.slide-image{
+    width: 90%;
+    height: 100%;
+    padding-left: 36rpx;
+  
+}
+.center{
+    height: 370rpx;
+    width: 90%;
+    padding-left: 36rpx;
+}
+.introduce{
+    float: left;
+    height: 40rpx;
+    width: 350rpx;
+}
+
+.introduce-detail{
+    display: inline-block;
+    height: 36rpx;
+    width: 36rpx;
+    font-size: 20rpx;
+
+}
+.introduce-detail image{
+    height: 100%;
+    width: 100%;
+}
+.product{
+    float: left;
+    height: 330rpx;
+    width: 100%;
+    padding: 10rpx;
+}
+.product-detail{
+    font-size: 25rpx;
+    margin: 10rpx;
+    border-radius: 50%;
+    float: left;
+    width: 110rpx;
+    height: 110rpx;
+}
+.product-detail image{
+    width: 100%;
+    height: 100%;
+}
