@@ -15,22 +15,19 @@ Page({
     })
   },
   onLoad: function () {
+    // console.log('--------------')
     wx.request({
-      url:'',
-      success(){
+      // 接口地址
+      url: 'http://47.98.159.95/m-api/personalized',
+      success:(res) => {
+        console.log(res);
         this.setData({
+          recommendList:res.data.banners,
           isRecommendListLoading:false
         })
       }
     })
-    
+   
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+  
 })

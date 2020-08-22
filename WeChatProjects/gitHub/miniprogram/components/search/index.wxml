@@ -1,0 +1,5 @@
+<!-- components/search/index.wxml -->
+<view class="van-search">
+    <van-field clearable type="search" left-icon="search" placeholder="{{ placeholder }}" bind:change="onChange" />
+    <view class="van-search__field"></view>
+</view>

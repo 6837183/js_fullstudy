@@ -22,7 +22,7 @@
 // console.log(set.size)s
 
 //数组去重
-let arr = [2,3,4,1,3,2,5]
+// let arr = [2,3,4,1,3,2,5]
 // console.log(arr.indexOf(4))
 // console.log([...new Set(arr)])
 // console.log([...new Set('abcdab')])
@@ -70,12 +70,37 @@ let arr = [2,3,4,1,3,2,5]
 
 
 //set 遍历
- let set = new Set(['red','green','blue'])
-set.add({ name: 'xiaoji'})
-set.add({age :20})
-set.add({sex:'boy'})
- //keys()是set结构中返回键名的遍历器
- //values()是set结构中返回值的遍历器
- for (let item of set) {
-     console.log(item)
- }
+//  let set = new Set(['red','green','blue'])
+// set.add({ name: 'xiaoji'})
+// set.add({age :20})
+// set.add({sex:'boy'})
+//  //keys()是set结构中返回键名的遍历器
+//  //values()是set结构中返回值的遍历器
+//  for (let item of set) {
+//      console.log(item)
+//  }
+
+// map.set(true,1) 
+// map.set('true',2)
+// console.log(map.get(true))
+// Map.prototype.keys()：返回键名的遍历器。
+// Map.prototype.values()：返回键值的遍历器。
+// Map.prototype.entries()：返回所有成员的遍历器。
+// Map.prototype.forEach()：遍历 Map 的所有成员。
+const map = new Map([
+    ['foo','no',],
+    ['bar','yse'],
+])
+for(let key of map.keys()){
+    // console.log(key)
+}
+for(let key of map.values()){
+    // console.log(key)
+}
+// map.forEach((e) =>{
+//     console.log(e)
+// })
+let k = [...map.keys()]
+let val =  [...map.values()]
+let m2 = [...map]
+console.log(m2)

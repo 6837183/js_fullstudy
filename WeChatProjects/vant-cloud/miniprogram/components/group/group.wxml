@@ -1,0 +1,7 @@
+<view class="group">
+    <view class="name">{{group.name}}</view>
+    <view class="user">
+        <image src="../../images/2.jpeg"/>
+        <van-icon name="arrow"  style="color:#c6c6c6"/>
+    </view>
+</view>

@@ -10,10 +10,9 @@ function test(){
 // test()  ---> AO: {} //回收
 // test()  ---> AO: {}
 
-// function a(){
-//     function b(){
-//         var b = 222
-//     }
-//     var a = 111
-
-// }
+function a(){
+    function b(){
+        var b = 222
+    }
+    var a = 111
+}

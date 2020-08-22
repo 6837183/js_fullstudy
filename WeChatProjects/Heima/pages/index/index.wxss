@@ -1,0 +1,128 @@
+.pyg-index{
+  height: 200vh;
+}
+swiper{
+  height: 400rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.Navigation {
+  display: flex;
+  margin-top: 30rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 16rpx solid #eee;
+}
+
+.recommend-item {
+  flex: 1;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.recommend-item image {
+  border-radius: 50%;
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.recommend-item text {
+  font-size: 28rpx;
+}
+/* components/w-tab-control/w-tab-control.wxss */
+.tab-control {
+  display: flex;
+  margin-bottom: 16rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+
+.active {
+  color: #ff5777;
+}
+
+.tab-item.active text {
+  padding: 16rpx 10rpx;
+  border-bottom: 6rpx solid #ff5777;
+}
+
+
+
+.present-menu{
+  margin-top: 40rpx;
+  height: 50rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+}
+.present-menu__list{
+  display: inline-block;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  font-size: 28rpx;
+  margin: 0 15rpx;
+
+  }
+ .present-menu__list:nth-child(1){
+   margin-left: 0;}
+   .present-card__pic{
+    column-count: 2;
+    column-width: 50%;
+    vertical-align: top;
+   }
+  
+ .present-card{
+   width: 320rpx;
+   border-radius: 20rpx;
+   background-color: #ffffff;
+   padding: 20rpx 20rpx 40rpx 20rpx;
+   display: inline-block;
+   box-sizing: border-box;
+   margin-top: 20rpx;
+
+  }
+ 
+ .cardPic{
+   width: 280rpx;
+   overflow: hidden;
+   border-radius: 10rpx;
+ }
+ .mi{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   position: relative;
+   margin: 30rpx 0 0 0;
+ }
+ .desc{
+   font-size: 32rpx;
+   width: 240rpx;
+  
+ }
+ .money{
+   color: #4aa568;
+   height: 40rpx;
+   font-size: 34rpx;
+   display: inline-block;
+   font-weight: bold;
+ 
+ }
+ .icon{
+   width: 60rpx;
+   overflow: hidden;
+   display: inline-block;
+   left:200rpx ;
+   position: absolute;
+ }

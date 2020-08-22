@@ -1,0 +1,56 @@
+<view class="pyg-index">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框 -->
+
+  <!-- 轮播图 -->
+  <swiper indicator-dots="true" autoplay="{{true}}" duration="{{duration}}" interval="{{interval}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item class="" item-id="">
+        <image class="slide-image" src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播图 -->
+
+  <!-- 楼层一 -->
+  <view class="Navigation">
+    <block wx:for="{{recommends}}" wx:key="index">
+      <view class="recommend-item">
+        <image src="{{item.image}}" />
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+   <!-- 楼层一 -->
+   <!-- 楼层二 -->
+   <view class='tab-control'>
+    <block wx:for="{{titles}}" wx:key="index">
+      <view class='tab-item {{index == currentIndex?"active": ""}}'
+            bind:tap="itemClick" 
+            data-index="{{index}}">
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+     <!-- 楼层二 -->
+     <!-- 首页商品展示 -->
+      <scroll-view class="present-menu" scroll-x="true">
+        <view class="present-menu__list" wx:for="{{category}}" id="{{item.id}}" bindtap="changeMenu"
+          style="color:{{item.id==idname?'#ffffff':'#000000'}}; background:{{item.id==idname?'#4aa568':'#e9e9e9'}}">
+          {{item.name}}
+        </view>
+      </scroll-view>
+
+       <view class="present-card__pic">
+        <view class="present-card" wx:for="{{detail}}" id="{{item.id}}" wx:if="{{item.id==idname}}">
+          <image class="cardPic" src="{{item.banner}}" mode="widthFix" />
+          <view class="desc">{{item.desc}}</view>
+          <view class="mi">
+            <view class="money">{{item.money}}</view>
+            <image class="icon" src="{{item.icon}}" mode="widthFix" />
+          </view>
+        </view>
+      </view>
+      
+</view>

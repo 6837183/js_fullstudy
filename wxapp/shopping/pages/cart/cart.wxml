@@ -30,4 +30,5 @@
             <text class="cart-total-price">￥ {{totalPrice}}</text>
         </view>
     </view>
+   <navigator url="/pages/user/user" open-type='switchTab'>调到</navigator> 
 </view>

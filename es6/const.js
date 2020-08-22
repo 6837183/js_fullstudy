@@ -31,12 +31,16 @@
 //     let tmp
 // }
 
+// const num = 1234
+//  num = 5678
+// console.log(num)
 
-var a = 'a'
-var a = 'aa'
-console.log(a)
+// if (true){
+//     console.log(age)
+//     const age = 18
+    
+// }
 
-let  b = 'b'
-let  b = 'bb'
-console.log(b)
-
+const message = 'Hello world'
+const message = 'hello'
+console.log(message)
