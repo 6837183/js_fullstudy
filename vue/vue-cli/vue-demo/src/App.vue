@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- 路由路口 -->
-    <transition name="fade">
-          <router-view></router-view>
-    </transition>
-
+    <home></home>
   </div>
 </template>
 
 <script>
 
+import Home from './components/Home'
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    Home
   }
 }
 </script>
@@ -27,18 +24,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-.fade-enter{
-  opacity: 0;
-}
-.fade-leave{
-  opacity: 1;
-}
-.fade-enter-active{
-  transition: opacity .5s;
-}
-.fade-leave-active{
-  opacity: 0;
-  transition: opacity .5s;
 }
 </style>

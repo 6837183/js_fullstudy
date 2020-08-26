@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,19 +28,40 @@
             <span v-text="message"></span><br/>
             <span v-html="newMessage"></span>
         </div> -->
-        <div class="count">
+        <!-- <div class="count">
             <p>{{count}}</p>
             <button v-on:click="add">+</button>
             <button @click="reduce">-</button>
-        </div>
+        </div> -->
+        <!-- <div class="model">
+            <p>{{message}}</p>
+            <p> v-model: <input type="text" v-model="message"/></p>
+        </div> -->
+        <!-- 
+        <div class="pic">
+            <img :src="imgSrc" alt="">
+        </div> -->
+        <!-- <div @click="changecolor"v-bind:class="{red: isRed}">欧巴凯很帅</div> -->
+
+        <!-- <div v-pre>{{message}}</div> -->
+
+        <!-- <div v-cloak>{{message}}</div> -->
+        <!-- 
+        <div v-once>{{message}}</div>
+       <input type="text" v-model="message"/> -->
+    
     </div>
 
     <script>
         var app = new Vue({
             el: '#app',
             data: {
+                className1: 'active',
+                className2: 'wrapper',
                 message: 'Hello world',
+                isRed:false,
                 newMessage:'<h2>Hello world</h2>',
+                imgSrc:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1598252072&di=0043947a2fe27c8986c2bebec8179fe9&src=http://p1.ssl.cdn.btime.com/t019ff04168eafd32b5.jpg?size=800x1200',
                 isSure: false,
                 count:0,
                 list: ['a', 'b', 'c', 'd'],
@@ -43,6 +72,10 @@
                 ]
             },
             methods: {
+                changecolor() {
+                    // console.log('123');
+                    this.isRed = !this.isRed
+                },
                 add() {
                     // console.log('666');
                     this.count++

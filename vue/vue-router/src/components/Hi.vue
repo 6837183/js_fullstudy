@@ -4,12 +4,17 @@
       <router-link :to="{name: 'hi1', params:{name: '乐怡'}}">hi 一</router-link>
       <span style="display:inline-block; width:100px"></span>
       <router-link to="/hi/hi2">hi 二</router-link>
-
+      <span style="display:inline-block; width:100px"></span>
+      <router-link to="/abc">404</router-link>
+      <div>
+          <!-- {{$route.params.}} -->
+      </div>
       <router-view></router-view>
   </div>
 </template>
 
 <script>
+// import { log } from 'util'
 export default {
     name: 'Hi',
     
@@ -17,7 +22,16 @@ export default {
         return {
             msg: 'Hi, I am 欧巴凯'
         }
-    }
+    },
+    
+    beforeRouterEnter: (to,from,next) => {
+        console.log('准备进入目标')
+        next()
+    },
+    beforeRouterLeave: (to,from,next) => {
+        console.log('准备离开目标')
+        next()
+    },
 }
 </script>
 
