@@ -10,6 +10,8 @@
 <keep-alive>
    <router-view/>
 </keep-alive>
+
+<v-play></v-play>
     <!-- menu -->
       <v-sidebar></v-sidebar>
   </div>
@@ -18,11 +20,13 @@
 import header from '@/components/header'
 import sidebar from '@/components/sidebar'
 import tab from '@/components/tab'
+import play from '@/components/play'
 export default {
   components: {
     'v-header':header,
     'v-sidebar': sidebar,
-    'v-tab':tab
+    'v-tab':tab,
+    'v-play': play
   }
 }
 </script>

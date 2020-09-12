@@ -55,5 +55,13 @@ export default {
   // music 搜索
   MusicSearch(params) {
       return fetchGet('/search',params)
+  },
+  MusicUrl(id) {
+    return fetchGet('/song/url', {
+      id
+    })
   }
 }
+
+//歌曲url
+

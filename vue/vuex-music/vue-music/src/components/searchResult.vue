@@ -7,7 +7,7 @@
   @scrollToEnd="searchMore"
   >
       <ul class="suggest-list">
-          <li class="suggest-item" @click="selectItem()" v-for="(item,index) in result" :key="index">
+          <li class="suggest-item" @click="selectItem(b)" v-for="(item,index) in result" :key="index">
               <div class="icon">
                   <i class="iconfont">&#xe654;</i>
               </div>
