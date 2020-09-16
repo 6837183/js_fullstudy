@@ -21,6 +21,7 @@ export default {
     height: 100vh;
     background: url("./../assets/img/raw_1512446172.jpeg") center no-repeat;
     background-size: 100% 100%;
+    box-sizing: border-box;
     h1{
         position: absolute;
         bottom: 3.92rem;

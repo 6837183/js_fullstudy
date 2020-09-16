@@ -20,47 +20,53 @@
 
 <script>
 export default {
-    data() {
-        return {
-            username: '',
-            userpwd: '',
-            awatar: require('../assets/img/raw_1512446140.jpeg')
-        }
+  data() {
+    return {
+      username: "",
+      userpwd: "",
+      awatar: require("../assets/img/raw_1512446140.jpeg")
+    };
+  },
+  methods: {
+    register() {
+      this.$router.push({ path: "/StarRegister" });
     },
-    methods: {
-        register() {
-            this.$router.push({path:'/StarRegister'})
-        },
-        login() {
-           if (this.username.trim() == '' || this.username.trim() == null) {
-            this.$toast('请输入账号')
-            return
+    login() {
+      if (this.username.trim() == "" || this.username.trim() == null) {
+        this.$toast("请输入账号");
+        return;
+      }
+      if (this.userpwd.trim() == "" || this.userpwd.trim() == null) {
+        this.$toast("请输入密码");
+        return;
+      }
+      this.$http({
+        method: "post",
+        url: this.$util.baseUrl + "/users/userLogin",
+        data: {
+          username: this.username.trim(),
+          userpwd: this.userpwd.trim()
         }
-         if (this.userpwd.trim() == '' || this.userpwd.trim() == null) {
-            this.$toast('请输入密码')
-            return
-        }
-        this.$http({
-          method: 'post',
-          url: this.$util.baseUrl+'./users/userLogin',
-          data: {
-            username: this.username.trim(),
-            userpwd: this.userpwd.trim()
-          }
-        }).then((res) =>{
-          if(res.data.code === "80000") {
+      })
+        .then(res => {
+          console.log(res);
+
+          if (res.data.code === "80000") {
             // 拿到后端返回的用户信息(用户名和昵称) 存到本地
+            sessionStorage.setItem("userInfo", JSON.stringify(res.data.data));
             // 跳转首页
-          
-          }else {
-            this.$toast(res.data.mess)
+            this.$router.push({ path: "/noteClass" });
+            console.log(res);
+          } else {
+            this.$toast(res.data.msg);
           }
-        }).catch((err) => {
-          console.log(err);
         })
-        }
+        .catch(err => {
+          console.log(err);
+        });
     }
-}
+  }
+};
 </script>
 
 <style lang="less" scoped>
