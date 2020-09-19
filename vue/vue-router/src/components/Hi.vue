@@ -7,7 +7,7 @@
       <span style="display:inline-block; width:100px"></span>
       <router-link to="/abc">404</router-link>
       <div>
-          <!-- {{$route.params.}} -->
+          {{$route.params.name}}
       </div>
       <router-view></router-view>
   </div>

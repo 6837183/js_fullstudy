@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import FirstQ from '../views/FirstQ.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -19,21 +20,10 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/main',
-    name: 'Main',
-    component: () => import('@/views/Main.vue')
-  }, {
-    path: '/detail',
-    name: 'Detail',
-    component: () => import('@/views/Detail.vue')
-  }, {
-    path: '/methods',
-    name: 'Methods',
-    component: () => import('@/views/Methods.vue')
-  }, {
-    path: '/watch',
-    name: 'Watch',
-    component: () => import('@/views/Watch.vue')
+    path: '/aaa',
+    name: 'aaa',
+    component: FirstQ
+
   }
 ]
 
